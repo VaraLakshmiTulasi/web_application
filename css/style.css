@@ -1,0 +1,86 @@
+body{
+font-family: Arial;
+}
+
+
+/* HERO */
+
+.hero{
+height:500px;
+background:url("../images/hero.jpg");
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.6);
+height:100%;
+display:flex;
+align-items:center;
+}
+
+
+/* SERVICES */
+
+.services{
+padding:80px 0;
+background:#f8f9fa;
+}
+
+.service-card{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+.service-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+
+/* PAGE BANNER */
+
+.page-banner{
+height:350px;
+background:url("../images/hero.jpg");
+background-size:cover;
+position:relative;
+}
+
+.banner-overlay{
+background:rgba(0,0,0,0.6);
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+
+/* CONTACT */
+
+.contact-section{
+padding:80px 0;
+}
+
+
+/* BUTTON */
+
+.btn-support{
+background:linear-gradient(45deg,#6a5cff,#9f7cff);
+color:white;
+border:none;
+}
+
+
+/* FOOTER */
+
+.footer{
+background:#111;
+color:white;
+padding:20px;
+}
