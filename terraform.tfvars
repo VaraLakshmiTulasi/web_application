@@ -1,0 +1,9 @@
+vpc_name            = "Learning"
+cidr_block          = "10.28.0.0/16"
+public_subnets_cidr = ["10.28.1.0/24", "10.28.2.0/24", "10.28.3.0/24"]
+azs                 = ["us-east-1a", "us-east-1b", "us-east-1c"]
+IGW_name            = "Learning_IGW"
+imagename           = "ami-0ecb62995f68bb549"
+key_name            = "Tulasi"
+env                 = "DEV"
+instance_type       = "t2.micro"
