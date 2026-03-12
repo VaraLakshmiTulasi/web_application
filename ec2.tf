@@ -13,11 +13,26 @@ resource "aws_instance" "public_servers" {
     CostCenter = "ABCD"
   }
   user_data = <<-EOF
-    #!/bin/bash
-    sudo apt-get update
-    sudo apt-get install -y nginx jq net-tools
-    echo "<h1>${var.vpc_name}-public-Server-${count.index + 1}</h1>" | sudo tee /var/www/html/index.nginx-debian.html
-    EOF
+#!/bin/bash
 
+apt update -y
+apt install nginx -y
+apt install git -y
+
+systemctl enable nginx
+systemctl start nginx
+
+cd /home/ubuntu
+git clone -b main https://github.com/VaraLakshmiTulasi/web_application.git
+
+rm -rf /var/www/html/index.nginx-debian.html
+
+cp web_application/index.html /var/www/html/index.nginx-debian.html
+cp web_application/css/style.css /var/www/html/style.css
+cp web_application/js/script.js  /var/www/html/script.js
+
+echo "<h1>${var.vpc_name}-Public-Server-${count.index + 1}</h1>" >> /var/www/html/index.nginx-debian.html
+
+EOF
 }
 

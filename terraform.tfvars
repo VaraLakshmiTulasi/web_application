@@ -5,5 +5,5 @@ azs                 = ["us-east-1a", "us-east-1b", "us-east-1c"]
 IGW_name            = "Learning_IGW"
 imagename           = "ami-0ecb62995f68bb549"
 key_name            = "Tulasi"
-env                 = "DEV"
+env                 = "PROD"
 instance_type       = "t2.micro"
